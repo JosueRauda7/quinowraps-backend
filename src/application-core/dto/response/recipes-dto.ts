@@ -11,6 +11,12 @@ export default class RecipesResponseDto {
   @Expose()
   @ApiProperty({
     type: String,
+    description: 'Nombre de la receta sugerida en ingles',
+  })
+  recipeNameInEnglish: string;
+  @Expose()
+  @ApiProperty({
+    type: String,
     description: 'Descripción de la receta en formato HTML',
   })
   recipeHtml: string;

@@ -25,8 +25,13 @@ export class RecipesController {
     const recipe = await this.openAiService.getRecipeSuggestion(
       ingredients.ingredients,
     );
+    const recipeNameInEnglish =
+      await this.openAiService.getNameFromSpanishToEnglish(
+        recipe.split('*')[1],
+      );
     return plainToInstance(RecipesResponseDto, {
       recipeName: recipe.split('*')[1],
+      recipeNameInEnglish: recipeNameInEnglish,
       recipeHtml: recipe.replace(/\*/g, ''),
     });
   }
