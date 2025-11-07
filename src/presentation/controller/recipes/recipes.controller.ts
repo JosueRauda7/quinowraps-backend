@@ -32,7 +32,7 @@ export class RecipesController {
     return plainToInstance(RecipesResponseDto, {
       recipeName: recipe.split('*')[1],
       recipeNameInEnglish: recipeNameInEnglish,
-      recipeHtml: recipe.replace(/\*/g, ''),
+      recipeHtml: recipe.split('*')[2],
     });
   }
 }

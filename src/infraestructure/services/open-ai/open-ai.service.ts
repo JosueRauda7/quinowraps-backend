@@ -12,7 +12,7 @@ export class OpenAiService {
     });
     const prompt = `Sugiere una receta que pueda hacerse con los siguientes ingredientes: ${ingredients.join(
       ', ',
-    )}, tortilla de tacos. Proporciona solo el nombre de la receta y su descripción. Responde en ${
+    )}, tortilla de taco (Dí Quinowraps en la receta, no tortilla de maíz o algo por el estilo). Proporciona solo el nombre de la receta y su descripción. Responde en ${
       maxTokens
     } tokens o menos. Añade instrucciones breves de preparación. Distingue el nombre de la receta encerrandolo entre asteriscos. La respuesta debe estar en formato HTML (sin \`\`\`html ni \\n, ocupar solamente h2, ul, li, p y strong) para titulos de instrucciones e ingredientes también envolverlos en strong`;
 
