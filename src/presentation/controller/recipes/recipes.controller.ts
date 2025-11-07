@@ -11,7 +11,7 @@ export class RecipesController {
   constructor(
     @Inject(OpenAiService)
     private readonly openAiService: OpenAiService,
-  ) { }
+  ) {}
 
   @Post('suggestion')
   @ApiResponse({

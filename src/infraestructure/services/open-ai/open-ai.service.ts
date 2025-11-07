@@ -14,7 +14,7 @@ export class OpenAiService {
       ', ',
     )}, tortilla de tacos. Proporciona solo el nombre de la receta y su descripción. Responde en ${
       maxTokens
-    } tokens o menos. Añade instrucciones breves de preparación. Distingue el nombre de la receta encerrandolo entre asteriscos. La respuesta que sea lista para presentar en un div html (no agregues saltos de línea)`;
+    } tokens o menos. Añade instrucciones breves de preparación. Distingue el nombre de la receta encerrandolo entre asteriscos y en una etiqueta strong con clase "recipeName". Que sea html la respuesta. La respuesta que sea lista para presentar en un div html (no agregues saltos de línea)`;
 
     const response = await openAI.chat.completions.create({
       model: 'gpt-4o-mini',
